@@ -1,0 +1,14 @@
+# don't ever lint node_modules
+node_modules
+
+# don't lint build output & static folder
+public
+static
+
+# don't lint nyc coverage output
+coverage
+
+# general project config
+.cache
+.github
+.idea
