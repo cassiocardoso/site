@@ -6,7 +6,7 @@ export default {
   siteLanguage: 'en',
   siteBanner: '/assets/banner.jpg',
   defaultBg: '/assets/trianglify-lowres.png',
-  favicon: 'src/favicon.png',
+  favicon: '/assets/site-icon.png',
   siteDescription: 'My personal website',
   author: 'Cassio Cardoso',
   siteLogo: '/assets/logo.png',

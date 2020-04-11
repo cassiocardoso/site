@@ -75,5 +75,11 @@ module.exports = {
         icon: config.favicon,
       },
     },
+		{
+			resolve: 'gatsby-plugin-favicon',
+			options: {
+				logo: './static/assets/site-icon.png',
+			},
+		},
   ]
 };
