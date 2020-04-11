@@ -3,7 +3,7 @@ date: "2014-04-02"
 title: "Three wise monkeys"
 language: "en"
 category: ""
-tags: ['contract', 'template', 'freelance'']
+tags: ['contract', 'template', 'freelance']
 draft: false
 noIndex: true
 path: "three-wise-monkeys"
