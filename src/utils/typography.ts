@@ -11,11 +11,11 @@ const typography = new Typography({
   googleFonts: [
     {
       name: config.headerFontFamily,
-      styles: ['700'],
+      styles: ['700&display=swap'],
     },
     {
       name: config.bodyFontFamily,
-      styles: ['400'],
+      styles: ['400&display=swap'],
     },
   ],
 });
