@@ -1,4 +1,5 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import { StaticQuery, graphql, Link } from 'gatsby';
 import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
 
@@ -112,6 +113,13 @@ export class Layout extends React.PureComponent<{}> {
         `}
         render={data => (
           <ThemeProvider theme={theme}>
+						<Helmet>
+							<link rel="canonical" href="https://cassio.codes" />
+							<link rel="preconnect" href="https://fonts.googleapis.com" />
+							<link rel="preconnect" href="https://www.google-analytics.com" />
+							<link rel="preconnect" href="https://www.googletagmanager.com" />
+							<meta name="description" content="I am a passionate and self-motivated front-end engineer with more than eight years of experience. I am passionate about the JavaScript world." />
+						</Helmet>
             <React.Fragment>
               <GlobalStyle />
               {children}
