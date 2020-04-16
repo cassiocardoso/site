@@ -12,6 +12,7 @@ import PageProps from '../models/PageProps';
 import config from '../../config/SiteConfig';
 import theme from '../../config/Theme';
 import { mediaV2 } from '../utils/media';
+import { personSchema } from '../utils/jsonLd';
 
 const Homepage = styled.main`
   display: flex;
@@ -123,7 +124,11 @@ export default class IndexPage extends React.Component<PageProps, any> {
     return (
       <Layout>
         <Wrapper fullWidth={true}>
-          <Helmet title={`Homepage | ${config.siteTitle}`} />
+					<Helmet title={`Homepage | ${config.siteTitle}`}>
+						<script type="application/ld+json">
+							{personSchema}
+						</script>
+					</Helmet>
           <Homepage>
             <GridRow background={true}>
               <HomepageContent center={true}>

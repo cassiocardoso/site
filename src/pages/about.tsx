@@ -11,6 +11,7 @@ import {
   Question,
 } from '../components';
 import config from '../../config/SiteConfig';
+import { personSchema } from '../utils/jsonLd';
 import PageProps from '../models/PageProps';
 
 export default class AboutPage extends React.Component<PageProps> {
@@ -18,6 +19,9 @@ export default class AboutPage extends React.Component<PageProps> {
     return (
       <Layout>
         <Helmet title={`About Me | ${config.siteTitle}`} />
+        <script type="application/ld+json">
+					{personSchema}
+				</script>
         <Header>
           <SectionTitle>About Me</SectionTitle>
         </Header>

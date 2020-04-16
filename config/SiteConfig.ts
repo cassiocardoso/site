@@ -1,7 +1,7 @@
 export default {
   pathPrefix: '/',
   siteTitle: 'Cassio Cardoso',
-  siteTitleAlt: 'Cassio Cardoso | Front-end Engineer',
+  siteTitleAlt: 'Cassio Cardoso | Software Engineer',
   siteUrl: 'https://cassio.codes',
   siteLanguage: 'en',
   siteBanner: '/assets/banner.jpg',
@@ -9,6 +9,7 @@ export default {
   favicon: './static/assets/site-icon.png',
   siteDescription: 'My personal website',
   author: 'Cassio Cardoso',
+	jobTitle: 'Software Engineer',
   siteLogo: '/assets/logo.png',
 
   userGitHub: 'cassiocardoso',

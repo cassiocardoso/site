@@ -22,6 +22,7 @@ import { Layout, Wrapper, Button, Header, Content } from '../components';
 import config from '../../config/SiteConfig';
 import theme from '../../config/Theme';
 import { mediaV2 } from '../utils/media';
+import { personSchema } from '../utils/jsonLd';
 import PageProps from '../models/PageProps';
 import { Resume } from '../models/Resume';
 
@@ -199,7 +200,11 @@ export default class ResumePage extends React.Component<PageProps, State> {
 
     return (
       <Layout>
-        <Helmet title={`Resume | ${config.siteTitle}`} />
+				<Helmet title={`Resume | ${config.siteTitle}`}>
+					<script type="application/ld+json">
+						{personSchema}
+					</script>
+				</Helmet>
         <Header />
         <Wrapper>
           <Content>

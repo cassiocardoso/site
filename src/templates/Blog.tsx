@@ -1,8 +1,10 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { Layout, Article, Wrapper, SectionTitle, Header, Content, Pagination } from '../components';
 import Helmet from 'react-helmet';
+
+import { Layout, Article, Wrapper, SectionTitle, Header, Content, Pagination } from '../components';
 import config from '../../config/SiteConfig';
+import { blogSchema } from '../utils/jsonLd';
 import Data from '../models/Data';
 
 interface Props {
@@ -22,7 +24,11 @@ export default class BlogPage extends React.Component<Props> {
 
     return (
       <Layout>
-        <Helmet title={`Blog | ${config.siteTitle}`} />
+				<Helmet title={`Blog | ${config.siteTitle}`}>
+					<script type="application/ld+json">
+						{blogSchema(edges)}
+					</script>
+				</Helmet>
         <Header>
           <SectionTitle uppercase>Latest stories</SectionTitle>
         </Header>
@@ -39,7 +45,7 @@ export default class BlogPage extends React.Component<Props> {
                 key={post.node.fields.slug}
               />
             ))}
-            <Pagination currentPage={currentPage} totalPages={totalPages} url={'blog'} />
+            <Pagination currentPage={currentPage} totalPages={totalPages} url="blog" />
           </Content>
         </Wrapper>
       </Layout>
@@ -63,6 +69,7 @@ export const BlogQuery = graphql`
             title
             date(formatString: "DD.MM.YYYY")
             category
+						tags
           }
           excerpt(pruneLength: 200)
           timeToRead
