@@ -25,6 +25,10 @@ const PostContent = styled.article`
   margin-top: 4rem;
 `;
 
+const Tag = styled(Link)`
+  margin: 0 0.25rem;
+`;
+
 const DisqusWrapper = styled.section`
   padding: 4rem 0 2rem 0;
   margin: 0 auto;
@@ -64,10 +68,10 @@ export default class PostPage extends React.PureComponent<Props> {
                 {post.frontmatter.tags ? (
                   <Subline>
                     Tags: &#160;
-                    {post.frontmatter.tags.map((tag, i) => (
-                      <Link key={i} to={`/tags/${kebabCase(tag)}`}>
-                        <strong>{tag}</strong> {i < post.frontmatter.tags.length - 1 ? `, ` : ``}
-                      </Link>
+                    {post.frontmatter.tags.map(tag => (
+                      <Tag key={tag} to={`/tags/${kebabCase(tag)}`}>
+                        {tag}
+                      </Tag>
                     ))}
                   </Subline>
                 ) : null}
@@ -94,7 +98,7 @@ export default class PostPage extends React.PureComponent<Props> {
 export const postQuery = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
-			id
+      id
       html
       fields {
         slug
