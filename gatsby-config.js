@@ -76,6 +76,12 @@ module.exports = {
       },
     },
 		{
+			resolve: 'gatsby-plugin-disqus',
+			options: {
+				shortname: 'cassiocardoso-me',
+			},
+		},
+		{
 			resolve: 'gatsby-plugin-google-analytics',
 			options: {
 				trackingId: 'UA-126089102-1',

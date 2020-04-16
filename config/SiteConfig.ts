@@ -2,7 +2,7 @@ export default {
   pathPrefix: '/',
   siteTitle: 'Cassio Cardoso',
   siteTitleAlt: 'Cassio Cardoso | Front-end Engineer',
-  siteUrl: 'https://cassiocardoso.me',
+  siteUrl: 'https://cassio.codes',
   siteLanguage: 'en',
   siteBanner: '/assets/banner.jpg',
   defaultBg: '/assets/trianglify-lowres.png',
