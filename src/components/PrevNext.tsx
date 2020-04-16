@@ -19,7 +19,7 @@ const Prev = styled.div`
   span {
     text-transform: uppercase;
     font-size: 0.8rem;
-    color: ${props => props.theme.colors.grey.light};
+    color: ${props => props.theme.colors.gray.light};
   }
 `;
 
@@ -29,7 +29,7 @@ const Next = styled.div`
   span {
     text-transform: uppercase;
     font-size: 0.8rem;
-    color: ${props => props.theme.colors.grey.light};
+    color: ${props => props.theme.colors.gray.light};
   }
 `;
 

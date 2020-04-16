@@ -22,7 +22,7 @@ export const PaginationContent = styled.div`
 
   .page-numbers {
     border-bottom: 0;
-    color: ${theme.colors.grey.light};
+    color: ${theme.colors.gray.light};
     float:left;
     letter-spacing: 0.1em;
     padding: 0 1.4rem;

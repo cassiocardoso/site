@@ -9,7 +9,7 @@ import PageProps from '../models/PageProps';
 import { zIndex } from '../utils/zIndex';
 
 const Title = styled.h2`
-	color: ${theme.colors.grey.default};
+	color: ${theme.colors.gray.default};
   margin-bottom: 0.75rem;
   padding: 3rem;
   position: relative;

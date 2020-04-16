@@ -9,7 +9,7 @@ interface Props {
     };
     colors: {
       white: string;
-      grey: {
+      gray: {
         light: string;
       };
     };

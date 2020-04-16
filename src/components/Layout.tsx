@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     background: ${theme.colors.bg};
-    color: ${theme.colors.grey.default};
+    color: ${theme.colors.gray.default};
 
     @media ${mediaV2.phoneOnly} {
       font-size: 0.8rem;

@@ -95,7 +95,7 @@ const SidebarItem = styled.div`
 `;
 
 const SkillName = styled.p`
-  color: ${theme.colors.grey.dark};
+  color: ${theme.colors.gray.dark};
   margin-bottom: 0.5rem;
 `;
 
