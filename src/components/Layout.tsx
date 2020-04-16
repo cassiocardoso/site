@@ -23,19 +23,19 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a {
-  	border-bottom: 0.1rem solid ${theme.colors.ceruleanBlue};
-    color: ${theme.colors.ceruleanBlue};
+  	border-bottom: 0.1rem solid ${theme.colors.gray.default};
+    color: ${theme.colors.gray.default};
     text-decoration: none;
     transition: all ${theme.transitions.normal};
 
     &:hover {
-	    border-bottom: 0.1rem solid ${theme.colors.grey.default};
-    	color: ${theme.colors.grey.default};
+	    border-bottom: 0.1rem solid ${theme.colors.ceruleanBlue};
+    	color: ${theme.colors.ceruleanBlue};
   	}
   }
 
   abbr[title] {
-  	border-bottom: 0.2rem dotted ${theme.colors.ceruleanBlue};
+  	border-bottom: 0.2rem dotted ${theme.colors.gray.default};
   }
 
   h1, h2, h3, h4 {
