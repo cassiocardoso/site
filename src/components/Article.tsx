@@ -23,7 +23,7 @@ const Initiale = styled.span`
   position: absolute;
   font-size: 7rem;
   transform: translate(-50%, -50%);
-  opacity: 0.08;
+  opacity: 0.1;
   user-select: none;
   z-index: ${zIndex.lowest};
 `;
