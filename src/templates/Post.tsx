@@ -3,7 +3,8 @@ import Helmet from 'react-helmet';
 import { Link, graphql } from 'gatsby';
 import styled from 'styled-components';
 import kebabCase from 'lodash/kebabCase';
-import { Disqus } from 'gatsby-plugin-disqus';
+import LazyLoad from 'react-lazy-load';
+import Disqus from 'react-disqus-comments';
 
 import {
   Layout,
@@ -25,9 +26,9 @@ const PostContent = styled.article`
 `;
 
 const DisqusWrapper = styled.section`
-	padding: 4rem 0 2rem 0;
-	margin: 0 auto;
-	max-width: 800px;
+  padding: 4rem 0 2rem 0;
+  margin: 0 auto;
+  max-width: 800px;
 `;
 
 interface Props {
@@ -41,15 +42,6 @@ export default class PostPage extends React.PureComponent<Props> {
   public render() {
     const { prev, next } = this.props.pathContext;
     const post = this.props.data.markdownRemark;
-		let disqusConfig;
-
-    if (window) {
-			disqusConfig = {
-				url: `${config.siteUrl}${location.pathname}`,
-				identifier: post.id,
-				title: post.frontmatter.title,
-			};
-		}
 
     return (
       <Layout>
@@ -80,7 +72,14 @@ export default class PostPage extends React.PureComponent<Props> {
                   </Subline>
                 ) : null}
                 <DisqusWrapper>
-									{disqusConfig && <Disqus config={disqusConfig} />}
+                  <LazyLoad offsetTop={300}>
+                    <Disqus
+                      shortname="cassiocardoso-me"
+                      identifier={post.id.toString()}
+                      title={post.frontmatter.title}
+                      url={`${config.siteUrl}/blog/${post.fields.slug}`}
+                    />
+                  </LazyLoad>
                 </DisqusWrapper>
                 <PrevNext prev={prev} next={next} />
               </Content>
@@ -95,6 +94,7 @@ export default class PostPage extends React.PureComponent<Props> {
 export const postQuery = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
+			id
       html
       fields {
         slug
