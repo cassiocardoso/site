@@ -42,7 +42,7 @@ export default class PostPage extends React.PureComponent<Props> {
     const { prev, next } = this.props.pathContext;
     const post = this.props.data.markdownRemark;
     let disqusConfig = {
-      url: `${config.siteUrl}${window.location.pathname}`,
+      url: `${config.siteUrl}${location.pathname}`,
       identifier: post.id,
       title: post.frontmatter.title,
     };
