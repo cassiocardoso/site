@@ -41,11 +41,15 @@ export default class PostPage extends React.PureComponent<Props> {
   public render() {
     const { prev, next } = this.props.pathContext;
     const post = this.props.data.markdownRemark;
-    let disqusConfig = {
-      url: `${config.siteUrl}${location.pathname}`,
-      identifier: post.id,
-      title: post.frontmatter.title,
-    };
+		let disqusConfig;
+
+    if (window) {
+			disqusConfig = {
+				url: `${config.siteUrl}${location.pathname}`,
+				identifier: post.id,
+				title: post.frontmatter.title,
+			};
+		}
 
     return (
       <Layout>
@@ -76,7 +80,7 @@ export default class PostPage extends React.PureComponent<Props> {
                   </Subline>
                 ) : null}
                 <DisqusWrapper>
-                  <Disqus config={disqusConfig} />
+									{disqusConfig && <Disqus config={disqusConfig} />}
                 </DisqusWrapper>
                 <PrevNext prev={prev} next={next} />
               </Content>
