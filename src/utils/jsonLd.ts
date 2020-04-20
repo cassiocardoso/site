@@ -23,7 +23,7 @@ export const personSchema = `
 `;
 
 type Edge = {
-	node: Post,
+  node: Post;
 };
 
 export const blogSchema = (edges: Edge[]) => `
@@ -36,27 +36,29 @@ export const blogSchema = (edges: Edge[]) => `
 			"url": "${config.siteUrl}"
 		},
 		"blogPost": [
-			${edges.map(edge => ({
-				"@context": "http://schema.org",
-				"@type": "BlogPosting",
-				"headline": `${edge.node.frontmatter.title}`,
-				"keywords": `${edge.node.frontmatter.tags ? edge.node.frontmatter.tags.join(', '): ''}`,
-				"url": `${config.siteUrl}/blog/${edge.node.fields.slug}`,
-				"datePublished": `${edge.node.frontmatter.date}`,
-				"dateCreated": `${edge.node.frontmatter.date}`,
-				"dateModified": `${edge.node.frontmatter.date}`,
-				"image": {},
-				"author": {
-					"@type": "Person",
-					"name": `${config.author}`,
-					"url": `${config.siteUrl}`
-				},
-				"publisher": {
-					"@type": "Person",
-					"name": `${config.author}`,
-					"url": `${config.siteUrl}`
-				}
-			}))}
+			${edges.map(edge =>
+        JSON.stringify({
+          '@context': 'http://schema.org',
+          '@type': 'BlogPosting',
+          headline: `${edge.node.frontmatter.title}`,
+          keywords: `${edge.node.frontmatter.tags ? edge.node.frontmatter.tags.join(', ') : ''}`,
+          url: `${config.siteUrl}/blog/${edge.node.fields.slug}`,
+          datePublished: `${edge.node.frontmatter.date}`,
+          dateCreated: `${edge.node.frontmatter.date}`,
+          dateModified: `${edge.node.frontmatter.date}`,
+          image: {},
+          author: {
+            '@type': 'Person',
+            name: `${config.author}`,
+            url: `${config.siteUrl}`,
+          },
+          publisher: {
+            '@type': 'Person',
+            name: `${config.author}`,
+            url: `${config.siteUrl}`,
+          },
+        }),
+      )}
 		]
 	}
 `;
