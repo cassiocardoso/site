@@ -35,7 +35,7 @@ export default class BlogPage extends React.Component<Props> {
             {edges.map(post => (
               <Article
                 title={post.node.frontmatter.title}
-                date={post.node.frontmatter.date}
+                date={post.node.frontmatter.formattedDate}
                 excerpt={post.node.excerpt}
                 timeToRead={post.node.timeToRead}
                 slug={post.node.fields.slug}
@@ -65,7 +65,8 @@ export const BlogQuery = graphql`
           }
           frontmatter {
             title
-            date(formatString: "DD.MM.YYYY")
+            date
+            formattedDate: date(formatString: "DD.MM.YYYY")
             category
             tags
           }

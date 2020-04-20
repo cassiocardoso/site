@@ -57,6 +57,7 @@ export const blogSchema = (edges: Edge[]) => `
             name: `${config.author}`,
             url: `${config.siteUrl}`,
           },
+          mainEntityOfPage: `${config.siteUrl}/blog/${edge.node.fields.slug}`,
         }),
       )}
 		]
