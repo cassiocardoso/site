@@ -19,9 +19,7 @@ export default class AboutPage extends React.Component<PageProps> {
     return (
       <Layout>
         <Helmet title={`About Me | ${config.siteTitle}`} />
-        <script type="application/ld+json">
-					{personSchema}
-				</script>
+        <script type="application/ld+json">{personSchema}</script>
         <Header>
           <SectionTitle>About Me</SectionTitle>
         </Header>

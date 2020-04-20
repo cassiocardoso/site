@@ -93,9 +93,9 @@ const Footer = styled.footer`
 `;
 
 const FooterLink = styled(Link)`
-	border-bottom: 0;
-	color: ${theme.colors.rocketBlack};
-	margin: 0.75rem;
+  border-bottom: 0;
+  color: ${theme.colors.rocketBlack};
+  margin: 0.75rem;
 `;
 
 export class Layout extends React.PureComponent<{}> {
@@ -113,25 +113,28 @@ export class Layout extends React.PureComponent<{}> {
         `}
         render={data => (
           <ThemeProvider theme={theme}>
-						<Helmet>
-							<link rel="canonical" href="https://cassio.codes" />
-							<link rel="preconnect" href="https://fonts.googleapis.com" />
-							<link rel="preconnect" href="https://www.google-analytics.com" />
-							<link rel="preconnect" href="https://www.googletagmanager.com" />
-							<meta name="description" content="I am a passionate and self-motivated front-end engineer with more than eight years of experience. I am passionate about the JavaScript world." />
-						</Helmet>
+            <Helmet>
+              <link rel="canonical" href="https://cassio.codes" />
+              <link rel="preconnect" href="https://fonts.googleapis.com" />
+              <link rel="preconnect" href="https://www.google-analytics.com" />
+              <link rel="preconnect" href="https://www.googletagmanager.com" />
+              <meta
+                name="description"
+                content="I am a passionate and self-motivated front-end engineer with more than eight years of experience. I am passionate about the JavaScript world."
+              />
+            </Helmet>
             <React.Fragment>
               <GlobalStyle />
               {children}
               <Footer>
-								<nav>
-									<FooterLink to="/">Home</FooterLink>
-									<FooterLink to="/about">About Me</FooterLink>
-									<FooterLink to="/purpose">Purpose</FooterLink>
-									<FooterLink to="/resume">Resume</FooterLink>
-									<FooterLink to="/blog">Blog</FooterLink>
-									<FooterLink to="/contact">Contact</FooterLink>
-								</nav>
+                <nav>
+                  <FooterLink to="/">Home</FooterLink>
+                  <FooterLink to="/about">About Me</FooterLink>
+                  <FooterLink to="/purpose">Purpose</FooterLink>
+                  <FooterLink to="/resume">Resume</FooterLink>
+                  <FooterLink to="/blog">Blog</FooterLink>
+                  <FooterLink to="/contact">Contact</FooterLink>
+                </nav>
                 <p>&copy; {split(data.site.buildTime, '.')[2]} by Cassio Cardoso</p>
               </Footer>
             </React.Fragment>

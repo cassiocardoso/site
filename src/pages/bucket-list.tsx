@@ -47,16 +47,16 @@ export default class BucketListPage extends React.Component<PageProps> {
               </li>
               <li>Spend a night at the desert</li>
               <li>See the Northern Lights</li>
-							<li>Visit the Tah Mahal</li>
+              <li>Visit the Tah Mahal</li>
               <li>Visit Yosemite National Park</li>
-							<li>Visit Chichen Itza</li>
+              <li>Visit Chichen Itza</li>
               <li>Walk in the Great Wall of China</li>
               <li>Visit Dracula's Castle in Romania</li>
-							<li>Go to the ancient city of Petra</li>
+              <li>Go to the ancient city of Petra</li>
               <li>See the Pyramid of Giza</li>
               <li>Walk across Abbey Road</li>
               <li>Hike the Inca Trail</li>
-							<li>Visit Machu Picchu</li>
+              <li>Visit Machu Picchu</li>
               <li>Float in the Dead Sea</li>
             </ul>
             <h2>Food</h2>

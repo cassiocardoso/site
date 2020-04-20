@@ -17,13 +17,13 @@ export const PaginationContent = styled.div`
   padding: 0 1rem;
 
   @media ${mediaV2.tablet} {
-  	padding: 0 2.5rem;
+    padding: 0 2.5rem;
   }
 
   .page-numbers {
     border-bottom: 0;
     color: ${theme.colors.gray.light};
-    float:left;
+    float: left;
     letter-spacing: 0.1em;
     padding: 0 1.4rem;
     transition: 400ms ease;
@@ -49,7 +49,7 @@ export const PaginationContent = styled.div`
     }
 
     @media ${mediaV2.tablet} {
-	    padding: 1rem;
+      padding: 1rem;
 
       &:nth-of-type(2) {
         padding-right: 5rem;

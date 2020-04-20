@@ -9,7 +9,7 @@ import PageProps from '../models/PageProps';
 import { zIndex } from '../utils/zIndex';
 
 const Title = styled.h2`
-	color: ${theme.colors.gray.default};
+  color: ${theme.colors.gray.default};
   margin-bottom: 0.75rem;
   padding: 3rem;
   position: relative;
@@ -33,10 +33,10 @@ export default class PurposePage extends React.Component<PageProps> {
         <Header />
         <Wrapper>
           <Content>
-						<Title>
-							<Initiale>W</Initiale>
-							<span>Work hard and be nice to people.</span>
-						</Title>
+            <Title>
+              <Initiale>W</Initiale>
+              <span>Work hard and be nice to people.</span>
+            </Title>
             <p>
               Over the years I'm proud to see how much I learnt, through college, by myself and,
               mostly, from my teammates. This inspires me to keep going on this path.

@@ -35,7 +35,7 @@ export const Content = styled.div`
   }
 
   @media ${mediaV2.desktop} {
-  	margin-top: -4rem;
-  	padding: 2rem 4rem;
+    margin-top: -4rem;
+    padding: 2rem 4rem;
   }
 `;

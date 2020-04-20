@@ -35,7 +35,7 @@ const Excerpt = styled.p`
 `;
 
 const NoBorderLink = styled(Link)`
-	border-bottom: 0;
+  border-bottom: 0;
 `;
 
 interface Props {

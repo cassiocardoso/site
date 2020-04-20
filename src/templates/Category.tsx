@@ -10,7 +10,9 @@ export default class Category extends React.PureComponent<PageProps> {
   public render() {
     const { posts, categoryName } = this.props.pathContext;
     const totalCount = posts ? posts.length : 0;
-    const subline = `${totalCount} post${totalCount === 1 ? '' : 's'} tagged with "${categoryName}"`;
+    const subline = `${totalCount} post${
+      totalCount === 1 ? '' : 's'
+    } tagged with "${categoryName}"`;
 
     return (
       <Layout>

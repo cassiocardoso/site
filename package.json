@@ -16,8 +16,7 @@
     "start": "gatsby develop",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "lint": "eslint . --ext .ts,.tsx",
-    "lint:fix": "tslint --fix --project .",
-    "fix": "prettier --write 'src/**/*.{ts,tsx}' && stylelint --fix 'src/**/*.scss' "
+    "prettier": "prettier --write 'src/**/*.{ts,tsx}' && stylelint --fix 'src/**/*.scss' "
   },
   "devDependencies": {
     "@types/lodash": "^4.14.117",

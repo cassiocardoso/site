@@ -27,6 +27,6 @@ export const Button: any = styled.button`
   }
 
   svg {
-  	margin-right: 1rem;
+    margin-right: 1rem;
   }
 `;

@@ -21,19 +21,19 @@ const Homepage = styled.main`
 
   @media ${mediaV2.tablet} {
     flex-direction: column;
-  	height: 100%;
+    height: 100%;
   }
 
   @media ${mediaV2.desktop} {
-  	flex-direction: row;
-  	height: 100vh;
+    flex-direction: row;
+    height: 100vh;
   }
 `;
 
 const SocialLinksWrapper = styled.div`
-	@media ${mediaV2.desktop} {
-		margin-top: 2rem;
-	}
+  @media ${mediaV2.desktop} {
+    margin-top: 2rem;
+  }
 `;
 
 const SocialLinks = styled.ul`
@@ -49,27 +49,27 @@ const SocialLinks = styled.ul`
     padding: 1rem;
 
     a {
-  		border-bottom: 0;
-  		color: ${theme.colors.white};
+      border-bottom: 0;
+      color: ${theme.colors.white};
 
-  		&:hover {
-  			border-bottom: 0;
-  		}
-  	}
+      &:hover {
+        border-bottom: 0;
+      }
+    }
   }
 `;
 
 const GridRow: any = styled.div`
   align-items: center;
   background: ${(props: any) =>
-	props.background
-		? `linear-gradient(
+    props.background
+      ? `linear-gradient(
       -185deg,
       ${rgba(darken(0.1, props.theme.colors.primary), 0.7)},
       ${rgba(lighten(0.1, props.theme.colors.rocketBlack), 0.9)}), url(/assets/bg.jpg) no-repeat`
-		: null};
+      : null};
   background-size: cover;
-	color: ${(props: any) => (props.background ? props.theme.colors.white : null)};
+  color: ${(props: any) => (props.background ? props.theme.colors.white : null)};
   display: flex;
   flex: 1;
   justify-content: center;
@@ -84,7 +84,7 @@ const GridRow: any = styled.div`
   }
 
   @media ${mediaV2.desktop} {
-  	padding: 2rem 4rem;
+    padding: 2rem 4rem;
   }
 `;
 
@@ -124,11 +124,9 @@ export default class IndexPage extends React.Component<PageProps, any> {
     return (
       <Layout>
         <Wrapper fullWidth={true}>
-					<Helmet title={`Homepage | ${config.siteTitle}`}>
-						<script type="application/ld+json">
-							{personSchema}
-						</script>
-					</Helmet>
+          <Helmet title={`Homepage | ${config.siteTitle}`}>
+            <script type="application/ld+json">{personSchema}</script>
+          </Helmet>
           <Homepage>
             <GridRow background={true}>
               <HomepageContent center={true}>
@@ -153,22 +151,38 @@ export default class IndexPage extends React.Component<PageProps, any> {
                 <SocialLinksWrapper>
                   <SocialLinks>
                     <li>
-                      <a href="https://br.linkedin.com/in/cassiocardoso" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://br.linkedin.com/in/cassiocardoso"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Linkedin size={24} />
                       </a>
                     </li>
                     <li>
-                      <a href="https://github.com/cassiocardoso" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://github.com/cassiocardoso"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <GitHub size={24} />
                       </a>
                     </li>
                     <li>
-                      <a href="https://codepen.io/cassiocardoso" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://codepen.io/cassiocardoso"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Codepen size={24} />
                       </a>
                     </li>
                     <li>
-                      <a href="https://twitter.com/cassiocardoso" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://twitter.com/cassiocardoso"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Twitter size={24} />
                       </a>
                     </li>

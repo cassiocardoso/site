@@ -13,6 +13,6 @@ export const Wrapper: any = styled.div`
   }
 
   @media ${mediaV2.desktop} {
-  	padding: ${(props: any) => (props.fullWidth ? '0' : '0 6rem')};
+    padding: ${(props: any) => (props.fullWidth ? '0' : '0 6rem')};
   }
 `;

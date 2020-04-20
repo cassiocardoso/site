@@ -24,11 +24,9 @@ export default class BlogPage extends React.Component<Props> {
 
     return (
       <Layout>
-				<Helmet title={`Blog | ${config.siteTitle}`}>
-					<script type="application/ld+json">
-						{blogSchema(edges)}
-					</script>
-				</Helmet>
+        <Helmet title={`Blog | ${config.siteTitle}`}>
+          <script type="application/ld+json">{blogSchema(edges)}</script>
+        </Helmet>
         <Header>
           <SectionTitle uppercase>Latest stories</SectionTitle>
         </Header>
@@ -69,7 +67,7 @@ export const BlogQuery = graphql`
             title
             date(formatString: "DD.MM.YYYY")
             category
-						tags
+            tags
           }
           excerpt(pruneLength: 200)
           timeToRead

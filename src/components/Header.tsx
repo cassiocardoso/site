@@ -49,7 +49,7 @@ const Content = styled.div`
   z-index: ${zIndex.high};
 
   a {
-  	border-bottom: 0;
+    border-bottom: 0;
     color: ${theme.colors.white};
 
     &:hover {
@@ -60,22 +60,22 @@ const Content = styled.div`
 `;
 
 const GoBackLink = styled(Link)`
-	border-bottom: 0;
+  border-bottom: 0;
   position: absolute;
   top: 0;
   left: 0;
   z-index: ${zIndex.high};
 
   &:hover {
-		border-bottom: 0;
+    border-bottom: 0;
   }
 
   @media ${mediaV2.tablet} {
-  	top: -40px;
+    top: -40px;
   }
 
   @media ${mediaV2.desktop} {
-	  top: -110px;
+    top: -110px;
   }
 `;
 
@@ -91,10 +91,10 @@ export class Header extends React.PureComponent<Props> {
     return (
       <HeaderWrapper banner={banner || config.defaultBg}>
         <Content>
-					<GoBackLink to="/">
-						<ArrowLeftCircle size={32} />
-					</GoBackLink>
-					{children}
+          <GoBackLink to="/">
+            <ArrowLeftCircle size={32} />
+          </GoBackLink>
+          {children}
         </Content>
       </HeaderWrapper>
     );

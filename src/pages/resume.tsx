@@ -27,11 +27,11 @@ import PageProps from '../models/PageProps';
 import { Resume } from '../models/Resume';
 
 const DownloadLink = styled.a`
-	border-bottom: 0;
+  border-bottom: 0;
 
-	&:hover {
-		border-bottom: 0;
-	}
+  &:hover {
+    border-bottom: 0;
+  }
 `;
 
 const DownloadButton = styled(Button)`
@@ -46,10 +46,10 @@ const ImageContainer = styled.div`
 
 const Image = styled.img`
   clip-path: circle(70px at center 70px);
-	margin: 0;
+  margin: 0;
 
   @media ${mediaV2.desktop} {
-  	margin: -120px 0 0;
+    margin: -120px 0 0;
   }
 `;
 
@@ -72,8 +72,8 @@ const ResumeContent = styled.div`
   grid-template-columns: 1fr;
 
   @media ${mediaV2.desktop} {
-	  grid-template-columns: 1fr 2fr;
-  	grid-gap: 1rem;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 1rem;
   }
 `;
 
@@ -200,11 +200,9 @@ export default class ResumePage extends React.Component<PageProps, State> {
 
     return (
       <Layout>
-				<Helmet title={`Resume | ${config.siteTitle}`}>
-					<script type="application/ld+json">
-						{personSchema}
-					</script>
-				</Helmet>
+        <Helmet title={`Resume | ${config.siteTitle}`}>
+          <script type="application/ld+json">{personSchema}</script>
+        </Helmet>
         <Header />
         <Wrapper>
           <Content>

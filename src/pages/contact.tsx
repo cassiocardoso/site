@@ -40,11 +40,11 @@ const FormFeedback = styled.div`
 `;
 
 const ButtonLink = styled(Link)`
-	border-bottom: 0;
+  border-bottom: 0;
 
-	&:hover {
-		border-bottom: 0;
-	}
+  &:hover {
+    border-bottom: 0;
+  }
 `;
 
 const LinkedInButton = styled(Button)`
