@@ -4,6 +4,8 @@ draft: false
 language: 'en'
 noIndex: false
 path: 'interview-guide'
+category: 'Management'
+tags: ['management','interview preparation']
 title: 'Tips for running a successful interview'
 ---
 
