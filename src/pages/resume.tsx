@@ -301,43 +301,6 @@ export default class ResumePage extends React.Component<PageProps, State> {
                     </section>
                     <Divider small />
                     <section>
-                      <h3>Volunteering</h3>
-                      {data.volunteer.map(vol => (
-                        <Snippet key={vol.organization}>
-                          <h4>
-                            {vol.organization}{' '}
-                            <small>
-                              {vol.startDate} - {vol.endDate}
-                            </small>
-                          </h4>
-                          <p>
-                            <IconWrapper>
-                              <Globe size={20} />
-                            </IconWrapper>
-                            <IconWrapper>
-                              <a href={vol.website} target="_blank" rel="noopener noreferrer">
-                                {vol.website}
-                              </a>
-                            </IconWrapper>
-                          </p>
-                          <p>
-                            <IconWrapper>
-                              <User size={20} />
-                            </IconWrapper>
-                            <span>{vol.position}</span>
-                          </p>
-                          <p>{vol.summary}</p>
-                          <p>Highlights:</p>
-                          <ul>
-                            {vol.highlights.map(highlight => (
-                              <li key={highlight}>{highlight}</li>
-                            ))}
-                          </ul>
-                        </Snippet>
-                      ))}
-                    </section>
-                    <Divider small />
-                    <section>
                       <h3>Education</h3>
                       {data.education.map(ed => (
                         <Snippet key={ed.area}>
@@ -381,6 +344,43 @@ export default class ResumePage extends React.Component<PageProps, State> {
                           <p>Highlights:</p>
                           <ul>
                             {project.highlights.map(highlight => (
+                              <li key={highlight}>{highlight}</li>
+                            ))}
+                          </ul>
+                        </Snippet>
+                      ))}
+                    </section>
+                    <Divider small />
+                    <section>
+                      <h3>Volunteering</h3>
+                      {data.volunteer.map(vol => (
+                        <Snippet key={vol.organization}>
+                          <h4>
+                            {vol.organization}{' '}
+                            <small>
+                              {vol.startDate} - {vol.endDate}
+                            </small>
+                          </h4>
+                          <p>
+                            <IconWrapper>
+                              <Globe size={20} />
+                            </IconWrapper>
+                            <IconWrapper>
+                              <a href={vol.website} target="_blank" rel="noopener noreferrer">
+                                {vol.website}
+                              </a>
+                            </IconWrapper>
+                          </p>
+                          <p>
+                            <IconWrapper>
+                              <User size={20} />
+                            </IconWrapper>
+                            <span>{vol.position}</span>
+                          </p>
+                          <p>{vol.summary}</p>
+                          <p>Highlights:</p>
+                          <ul>
+                            {vol.highlights.map(highlight => (
                               <li key={highlight}>{highlight}</li>
                             ))}
                           </ul>
