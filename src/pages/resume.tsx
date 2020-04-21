@@ -391,7 +391,7 @@ export default class ResumePage extends React.Component<PageProps, State> {
                 </ResumeContent>
               </Fragment>
             )}
-            <DownloadLink href="/assets/Cassio_Cardoso>Resume.pdf" download>
+            <DownloadLink href="/assets/Cassio_Cardoso_Resume.pdf" download>
               <DownloadButton big>
                 <Download size={24} /> Download as PDF
               </DownloadButton>
