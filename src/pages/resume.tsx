@@ -165,8 +165,6 @@ export default class ResumePage extends React.Component<PageProps, State> {
       'https://raw.githubusercontent.com/cassiocardoso/resume/master/resume.json',
     ).then(res => res.json());
 
-    console.log('DATA::', data);
-
     this.setState({ data });
   }
 
