@@ -114,6 +114,11 @@ export default class ContactPage extends React.Component<PageProps, State> {
                 <label htmlFor="message">Message</label>
                 <textarea id="message" name="message" cols={30} rows={6} />
               </FormGroup>
+              <div
+                className="g-recaptcha"
+                style={{ margin: '2rem 0.5rem' }}
+                data-sitekey="6LctYPAUAAAAAGu5IpuP9MLWIHjLxJZ1rOybZiqe"
+              />
               <Submit type="submit" big>
                 Send message
               </Submit>
@@ -142,7 +147,9 @@ export default class ContactPage extends React.Component<PageProps, State> {
   public render() {
     return (
       <Layout>
-        <Helmet title={`Contact | ${config.siteTitle}`} />
+        <Helmet title={`Contact | ${config.siteTitle}`}>
+          <script src="https://www.google.com/recaptcha/api.js" async defer />
+        </Helmet>
         <Header>
           <SectionTitle>Contact</SectionTitle>
         </Header>
