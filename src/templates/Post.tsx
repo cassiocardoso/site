@@ -6,6 +6,8 @@ import kebabCase from 'lodash/kebabCase';
 import LazyLoad from 'react-lazy-load';
 import Disqus from 'react-disqus-comments';
 
+import theme from '../../config/Theme';
+
 import {
   Layout,
   Wrapper,
@@ -23,6 +25,14 @@ import Post from '../models/Post';
 
 const PostContent = styled.article`
   margin-top: 4rem;
+
+  .anchor {
+    border-bottom-color: transparent;
+
+    &:hover {
+      border-bottom-color: ${theme.colors.ceruleanBlue};
+    }
+  }
 `;
 
 const Tag = styled(Link)`
