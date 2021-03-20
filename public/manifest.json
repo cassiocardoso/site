@@ -1,0 +1,27 @@
+{
+  "name": "Cassio Cardoso",
+  "short_name": "ccardoso",
+  "background_color": "#16161a",
+  "description": "My personal website",
+  "display": "fullscreen",
+  "start_url": "/",
+  "theme_color": "#fffffe",
+  "icons": [
+	{
+	  "src": "/icon-192.png",
+	  "type": "image/png",
+	  "sizes": "192x192"
+	},
+	{
+	  "src": "/icon-512.png",
+	  "type": "image/png",
+	  "sizes": "512x512"
+	},
+	{
+	  "src": "/maskable-icon.png",
+	  "type": "image/png",
+	  "sizes": "512x512",
+	  "purpose": "any maskable"
+	}
+  ]
+}

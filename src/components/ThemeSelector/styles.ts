@@ -47,19 +47,19 @@ export const Input = styled.input`
   display: none;
 
   &#Auto:checked ~ ${SwitchIndicator} {
-    background: url(/assets/auto.svg) no-repeat;
+    background: url(/auto.svg) no-repeat;
     background-size: contain;
     transform: translateX(3rem);
   }
 
   &#Dark:checked ~ ${SwitchIndicator} {
-    background: url(/assets/dark.svg) no-repeat;
+    background: url(/dark.svg) no-repeat;
     background-size: contain;
     transform: translateX(7.5rem);
   }
 
   &#Light:checked ~ ${SwitchIndicator} {
-    background: url(/assets/light.svg) no-repeat;
+    background: url(/light.svg) no-repeat;
     background-size: contain;
     transform: translateX(12rem);
   }
