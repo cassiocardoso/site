@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+	"postbuild": "next-sitemap",
     "commit": "cz",
     "lint": "yarn lint:js && yarn lint:css",
     "lint:css": "stylelint \"src/**/styles.ts\" --max-warnings 0",
@@ -30,6 +31,7 @@
     "next": "^10.0.9",
     "next-dark-mode": "^3.0.0",
     "next-pwa": "^5.0.6",
+    "next-sitemap": "^1.6.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "styled-components": "^5.2.1",
