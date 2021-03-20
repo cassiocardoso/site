@@ -15,6 +15,7 @@ const Wrapper = styled.main`
 
 const Title = styled.h1`
   font-size: 4rem;
+  margin-bottom: 2rem;
   text-align: center;
 
   @media screen and (min-width: ${screenMd}) {
@@ -23,15 +24,17 @@ const Title = styled.h1`
 `;
 
 const Lead = styled.p`
+  font-family: var(--font-family-heading);
   font-size: 1.2rem;
   line-height: 1.2;
+  margin-bottom: 2rem;
 
   @media screen and (min-width: ${screenMd}) {
     font-size: 2rem;
   }
 `;
 
-const Home: FC = () => (
+const HomePage: FC = () => (
   <BaseLayout>
     <Container>
       <Wrapper>
@@ -47,4 +50,4 @@ const Home: FC = () => (
   </BaseLayout>
 );
 
-export default Home;
+export default HomePage;
