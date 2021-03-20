@@ -48,6 +48,8 @@ jspm_packages
 # Yarn Integrity file
 .yarn-integrity
 
+# Next
+.next
 
 # Build Files
 public/
