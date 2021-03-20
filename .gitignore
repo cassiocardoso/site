@@ -51,6 +51,9 @@ jspm_packages
 # Next
 .next
 
+# env
+.env.local
+
 # Build Files
 .cache/
 
