@@ -19,6 +19,7 @@ const GlobalStyles = createGlobalStyle`
 		--orange-500: #faae2b;
 		--pink-500: #ff8ba7;
 
+		--anchor-color: var(--blue-500);
 		--background-color: var(--gray-900);
 		--heading-color: var(--gray-100);
 		--headline-color: var(--gray-100);
@@ -36,6 +37,7 @@ const GlobalStyles = createGlobalStyle`
 		${({ darkModeActive }: GlobalStylesProps) =>
       darkModeActive &&
       css`
+        --anchor-color: var(--purple-500);
         --background-color: var(--gray-100);
         --heading-color: var(--gray-900);
         --headline-color: var(--gray-900);
@@ -62,12 +64,17 @@ const GlobalStyles = createGlobalStyle`
 		margin: 0;
 		padding: 0;
     font-family: var(--font-family-body), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  	color: var(--text-color);
+  	background-color: var(--background-color);
+		color: var(--text-color);
 	}
 
 	h1, h2, h3, h4, h5, h6 {
 		color: var(--heading-color);
 		font-family: var(--font-family-heading);
+	}
+
+	a {
+		color: var(--anchor-color);
 	}
 `;
 

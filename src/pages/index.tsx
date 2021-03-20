@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import { BaseLayout } from 'layouts/Base';
 import { Container } from 'components/Container';
+import { Nav } from 'components/Nav';
 import { screenMd } from 'styles/tokens';
 
 const Wrapper = styled.main`
@@ -40,11 +41,12 @@ const HomePage: FC = () => (
       <Wrapper>
         <Title>Hi, I'm Cassio</Title>
         <Lead>
-          I am a passionate and self-motivated frontend engineer. I've been working with tech since
-          the early 2010s. I love to craft great user experiences in the most efficient and elegant
-          way. I am completely enthusiastic with a full-stack environment and passionate about the
-          JavaScript world
+          I am a passionate and self-motivated frontend engineer, I have been working with tech
+          since the early 2010s. I love to craft great user experiences in the most efficient and
+          elegant way. I am completely enthusiastic with a full-stack environment and passionate
+          about the JavaScript world
         </Lead>
+        <Nav />
       </Wrapper>
     </Container>
   </BaseLayout>

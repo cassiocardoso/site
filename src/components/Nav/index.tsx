@@ -7,14 +7,17 @@ const StyledNav = styled.nav`
 `;
 
 const NavLink = styled.a`
-  color: #f04;
-  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin: 0 1rem;
+  text-decoration: underline;
 `;
 
 export const Nav: FC = () => (
   <StyledNav>
     <Link href="/about">
-      <NavLink>About</NavLink>
+      <NavLink href="/about">About Me</NavLink>
     </Link>
+    <NavLink href="mailto:caugusto.cardoso@gmail.com">Contact</NavLink>
   </StyledNav>
 );
