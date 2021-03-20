@@ -1,14 +1,13 @@
-import { FC, ReactElement } from 'react';
+import { FC, ReactNode } from 'react';
 
 import * as S from './styles';
 import { ThemeSelector } from 'components/ThemeSelector';
 
 type Props = {
-  children: ReactElement;
+  children: ReactNode;
 };
 
-// eslint-disable-next-line react/prop-types
-export const BaseLayout: FC<Props> = ({ children }) => (
+export const BaseLayout: FC<Props> = ({ children }: Props) => (
   <S.BaseLayout>
     <ThemeSelector />
     {children}
