@@ -20,8 +20,11 @@ function App({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>Cassio Cardoso</title>
-        <link rel="shortcut icon" href="/images/icon-512.png" />
-        <link rel="apple-touch-icon" href="/images/icon-512.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#7f5af0" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#fffffe" />
         <meta name="description" content="My personal website" />
