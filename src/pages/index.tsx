@@ -15,12 +15,12 @@ const Wrapper = styled.main`
 `;
 
 const Title = styled.h1`
-  font-size: 4rem;
+  font-size: var(--font-size-xl);
   margin-bottom: 2rem;
   text-align: center;
 
   @media screen and (min-width: ${screenMd}) {
-    font-size: 6rem;
+    font-size: var(--font-size-xxl);
   }
 `;
 

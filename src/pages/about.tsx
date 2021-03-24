@@ -38,6 +38,9 @@ const AboutPage: FC = () => (
       </a>{' '}
       to revolutionize an entire industry by digitizing the company car of the future.
     </p>
+    <p>
+      For more detailed information, check my <a href="/resume">resume</a>.
+    </p>
   </PageLayout>
 );
 

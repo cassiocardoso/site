@@ -9,4 +9,7 @@ module.exports = withPWA({
   experimental: {
     optimizeFonts: true,
   },
+  images: {
+    domains: ['raw.githubusercontent.com'],
+  },
 });

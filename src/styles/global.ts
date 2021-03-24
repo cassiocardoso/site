@@ -25,6 +25,13 @@ const GlobalStyles = createGlobalStyle`
 		--spacing-lg: 3rem;
 		--spacing-xl: 4rem;
 		--spacing-xxl: 6rem;
+
+		--font-size-sm: 0.9rem;
+		--font-size-md: 16px;
+		--font-size-lg: 1.5rem;
+		--font-size-xl: 4rem;
+		--font-size-xxl:6rem;
+
 		--anchor-color: var(--blue-500);
 		--background-color: var(--gray-900);
 		--heading-color: var(--gray-100);
@@ -77,6 +84,12 @@ const GlobalStyles = createGlobalStyle`
 	h1, h2, h3, h4, h5, h6 {
 		color: var(--heading-color);
 		font-family: var(--font-family-heading);
+	}
+
+	p {
+		font-size: var(--font-size-md);
+		line-height: 1.3;
+		margin-bottom: var(--spacing-md);
 	}
 
 	a {

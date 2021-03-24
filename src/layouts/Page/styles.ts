@@ -9,20 +9,14 @@ export const PageLayout = styled.div`
   width: 100vw;
 
   h2 {
-    margin: 2rem 0;
-  }
-
-  p {
-    font-size: 1.2rem;
-    line-height: 1.5;
-    margin-bottom: 1.5rem;
+    margin: var(--spacing-md) 0;
   }
 `;
 
 export const PageTitle = styled.h1`
-  margin: 6rem 0 2rem 0;
+  margin: var(--spacing-xxl) 0 var(--spacing-md) 0;
 
   @media screen and (min-width: ${screenMd}) {
-    margin: 2rem 0;
+    margin: var(--spacing-md) 0;
   }
 `;
