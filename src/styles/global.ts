@@ -19,6 +19,12 @@ const GlobalStyles = createGlobalStyle`
 		--orange-500: #faae2b;
 		--pink-500: #ff8ba7;
 
+		--spacing-xs: 0.5rem;
+		--spacing-sm: 1rem;
+		--spacing-md: 2rem;
+		--spacing-lg: 3rem;
+		--spacing-xl: 4rem;
+		--spacing-xxl: 6rem;
 		--anchor-color: var(--blue-500);
 		--background-color: var(--gray-900);
 		--heading-color: var(--gray-100);

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 
 const StyledNav = styled.nav`
-  font-family: var(----font-family-body);
+  font-family: var(--font-family-body);
 `;
 
 const NavLink = styled.a`
@@ -17,6 +17,9 @@ export const Nav: FC = () => (
   <StyledNav>
     <Link href="/about">
       <NavLink href="/about">About Me</NavLink>
+    </Link>
+    <Link href="/purpose">
+      <NavLink href="/purpose">Purpose</NavLink>
     </Link>
     <NavLink href="mailto:caugusto.cardoso@gmail.com">Contact</NavLink>
   </StyledNav>
