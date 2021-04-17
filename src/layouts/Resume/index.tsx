@@ -72,7 +72,7 @@ export const ResumeLayout: FC<Props> = ({ resume }: Props) => {
           <p>{basics.summary}</p>
           <S.Divider />
           <S.Content>
-            <S.Sidebar>
+            <aside>
               <S.Download href="/2021_CC_RESUME.pdf" download>
                 <Download size={32} />
                 Download as PDF
@@ -113,7 +113,7 @@ export const ResumeLayout: FC<Props> = ({ resume }: Props) => {
                   </Fragment>
                 ))}
               </dl>
-            </S.Sidebar>
+            </aside>
             <S.Main>
               <section>
                 <S.SectionTitle>Professional experience</S.SectionTitle>

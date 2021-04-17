@@ -92,14 +92,6 @@ export const Content = styled.div`
   }
 `;
 
-export const Sidebar = styled.aside`
-  font-size: var(--font-size-sm);
-
-  p {
-    font-size: var(--font-size-sm);
-  }
-`;
-
 export const SidebarItem = styled.div`
   display: flex;
   align-items: center;
