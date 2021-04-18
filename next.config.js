@@ -10,6 +10,6 @@ module.exports = withPWA({
     optimizeFonts: true,
   },
   images: {
-    domains: ['raw.githubusercontent.com'],
+    domains: ['raw.githubusercontent.com', 'a.storyblok.com'],
   },
 });

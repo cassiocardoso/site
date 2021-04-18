@@ -32,9 +32,12 @@ const GlobalStyles = createGlobalStyle`
 		--font-size-xl: 4rem;
 		--font-size-xxl:6rem;
 
+		--radius-sm: 8px;
+		--radius-md: 16px;
+
 		--anchor-color: var(--blue-500);
 		--background-color: var(--gray-900);
-		--code-color: var(--gray-700);
+		--code-color: var(--gray-100);
 		--heading-color: var(--gray-100);
 		--headline-color: var(--gray-100);
 		--text-color: var(--gray-200);
@@ -88,14 +91,28 @@ const GlobalStyles = createGlobalStyle`
 		font-family: var(--font-family-heading);
 	}
 
+	h1, h2 {
+		margin: var(--spacing-md) 0;
+	}
+
+	h3, h4, h5, h6 {
+		margin: var(--spacing-sm) 0;
+	}
+
 	p {
 		font-size: var(--font-size-md);
 		line-height: 1.3;
-		margin-bottom: var(--spacing-md);
+		margin: var(--spacing-md) 0;
 	}
 
 	a {
 		color: var(--anchor-color);
+	}
+
+	pre {
+		overflow: auto;
+		padding: var(--spacing-sm);
+		border-left: 2px solid;
 	}
 
 	code {

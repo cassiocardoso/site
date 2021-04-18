@@ -28,6 +28,7 @@
     }
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "mailgo": "^0.11.3",
     "next": "^10.0.9",
     "next-dark-mode": "^3.0.0",
@@ -36,6 +37,8 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-feather": "^2.0.9",
+    "storyblok-js-client": "^3.3.1",
+    "storyblok-react": "^0.1.2",
     "styled-components": "^5.2.1",
     "webpack": "^4.46.0"
   },

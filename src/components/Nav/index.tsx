@@ -29,6 +29,9 @@ export const Nav: FC = () => (
     <Link href="/about">
       <NavLink href="/about">About Me</NavLink>
     </Link>
+    <Link href="/blog">
+      <NavLink href="/blog">Blog</NavLink>
+    </Link>
     <Link href="/uses">
       <NavLink href="/uses">Uses</NavLink>
     </Link>

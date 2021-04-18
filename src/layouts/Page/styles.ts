@@ -5,12 +5,9 @@ export const PageLayout = styled.div`
   background-color: var(--background-color);
   color: var(--text-color);
   min-height: 100vh;
+  padding-bottom: var(--spacing-xxl);
   transition: background-color 400ms ease;
   width: 100vw;
-
-  h2 {
-    margin: var(--spacing-md) 0;
-  }
 `;
 
 export const PageTitle = styled.h1`
