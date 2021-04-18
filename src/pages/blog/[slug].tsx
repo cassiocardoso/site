@@ -9,6 +9,7 @@ type Props = {
 };
 
 const BlogPostPage: FC<Props> = ({ post }: Props) => {
+  if (!post) return null;
   return <BlogPostLayout post={post} />;
 };
 
