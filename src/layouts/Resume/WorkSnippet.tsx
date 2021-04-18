@@ -1,9 +1,14 @@
+import { FC } from 'react';
 import { Globe, Home, User } from 'react-feather';
 
 import { Work } from '../../@types/resume';
 import * as S from './styles';
 
-export const WorkSnippet = ({ work }: { work: Work }) => {
+type Props = {
+  work: Work;
+};
+
+export const WorkSnippet: FC<Props> = ({ work }: Props) => {
   return (
     <S.Snippet>
       <S.SnippetTitle>{work.name}</S.SnippetTitle>

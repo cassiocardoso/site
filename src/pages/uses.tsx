@@ -5,15 +5,15 @@ import { PageLayout } from 'layouts/Page';
 const UsesPage: FC = () => (
   <PageLayout title="Uses">
     <p>
-      Following <a href="https://wesbos.com/">Wes Bos</a>' idea I decided to create a{' '}
+      Following <a href="https://wesbos.com/">Wes Bos</a>&apos; idea I decided to create a{' '}
       <code>/uses</code> page to share my current setup. Go check out{' '}
       <a href="https://uses.tech/">uses.tech</a> to see a bunch of cool setups.
     </p>
     <h2>Editor</h2>
     <p>
       My default editor is <a href="https://www.jetbrains.com/webstorm/">WebStorm</a> which I have
-      been using regularly since 2016. I don't add a bunch of plugins to Webstorm since I think the
-      bundled ones are pretty good, but I always install the{' '}
+      been using regularly since 2016. I don&apos;t add a bunch of plugins to Webstorm since I think
+      the bundled ones are pretty good, but I always install the{' '}
       <a href="https://plugins.jetbrains.com/plugin/10044-atom-material-icons">
         Atom Material Icons
       </a>{' '}
@@ -76,19 +76,20 @@ const UsesPage: FC = () => (
     <h2>Desk Setup</h2>
     <p>
       My desk and chair are some standard office models that I got for free from my previous
-      employer. I don't know which are the models, they aren't fancy but they work well.
+      employer. I don&apos;t know which are the models, they aren&apos;t fancy but they work well.
     </p>
     <p>
       I have one external monitor which is a{' '}
       <a href="https://www.amazon.de/gp/product/B07NPHZQTP/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1">
         {' '}
-        AOC 32" curved gaming monitor
+        AOC 32&quot; curved gaming monitor
       </a>
-      . It's focused on gaming, but works pretty well to code and it's also great to watch movies.
+      . It&apos;s focused on gaming, but works pretty well to code and it&apos;s also great to watch
+      movies.
     </p>
     <p>
-      I have a JBL Everest headphone which is going into it's 5th anniversary and still working
-      pretty well. It doesn't have noise cancelling, which is something I might consider for a
+      I have a JBL Everest headphone which is going into it&apos;s 5th anniversary and still working
+      pretty well. It doesn&apos;t have noise cancelling, which is something I might consider for a
       future model.
     </p>
   </PageLayout>

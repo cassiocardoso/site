@@ -33,7 +33,7 @@ const AboutPage: FC = () => (
     </p>
     <p>
       In the summer of 2020, I joined{' '}
-      <a href="https://vimcar.de/" target="_blank">
+      <a href="https://vimcar.de/" target="_blank" rel="noreferrer">
         Vimcar
       </a>{' '}
       to revolutionize an entire industry by digitizing the company car of the future.

@@ -1,9 +1,14 @@
-import { Globe, Home, User } from 'react-feather';
+import { FC } from 'react';
+import { Home } from 'react-feather';
 
 import { Education } from '../../@types/resume';
 import * as S from './styles';
 
-export const EducationSnippet = ({ education }: { education: Education }) => {
+type Props = {
+  education: Education;
+};
+
+export const EducationSnippet: FC<Props> = ({ education }: Props) => {
   return (
     <S.Snippet>
       <S.SnippetTitle>{education.area}</S.SnippetTitle>

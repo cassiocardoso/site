@@ -1,4 +1,6 @@
-export const Analytics = () => (
+import { FC } from 'react';
+
+export const Analytics: FC = () => (
   <>
     <script
       async

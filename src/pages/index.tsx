@@ -39,7 +39,7 @@ const HomePage: FC = () => (
   <BaseLayout>
     <Container>
       <Wrapper>
-        <Title>Hi, I'm Cassio</Title>
+        <Title>Hi, I&apos;m Cassio</Title>
         <Lead>
           I am a passionate and self-motivated frontend engineer, I have been working with tech
           since the early 2010s. I love to craft great user experiences in the most efficient and

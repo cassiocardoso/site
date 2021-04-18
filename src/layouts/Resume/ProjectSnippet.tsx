@@ -1,9 +1,14 @@
-import { Globe, Home, User } from 'react-feather';
+import { FC } from 'react';
+import { Globe, User } from 'react-feather';
 
 import { Project } from '../../@types/resume';
 import * as S from './styles';
 
-export const ProjectSnippet = ({ project }: { project: Project }) => {
+type Props = {
+  project: Project;
+};
+
+export const ProjectSnippet: FC<Props> = ({ project }: Props) => {
   return (
     <S.Snippet>
       <S.SnippetTitle>{project.organization}</S.SnippetTitle>
