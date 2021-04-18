@@ -12,11 +12,16 @@ const Wrapper = styled.main`
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  padding-top: var(--spacing-lg);
+
+  @media screen and (min-width: ${screenMd}) {
+    padding-top: 0;
+  }
 `;
 
 const Title = styled.h1`
   font-size: var(--font-size-xl);
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-md);
   text-align: center;
 
   @media screen and (min-width: ${screenMd}) {
@@ -27,7 +32,7 @@ const Title = styled.h1`
 const Lead = styled.p`
   font-family: var(--font-family-heading);
   font-size: 1.2rem;
-  line-height: 1.2;
+  line-height: 1.4;
   margin-bottom: 2rem;
 
   @media screen and (min-width: ${screenMd}) {
