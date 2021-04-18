@@ -6,11 +6,13 @@ import { screenMd } from 'styles/tokens';
 
 const StyledNav = styled.nav`
   font-family: var(--font-family-body);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
 
   @media screen and (min-width: ${screenMd}) {
+    display: flex;
+    align-items: center;
     flex-direction: row;
   }
 `;
