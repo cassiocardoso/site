@@ -29,7 +29,7 @@ export function BlogPostLayout({ post }: Props) {
           </header>
           <div
             className="prose dark:prose-invert max-w-none [&_img]:max-w-full"
-            dangerouslySetInnerHTML={{ __html: body }}
+            dangerouslySetInnerHTML={{ __html: body ?? '' }}
           />
         </article>
       </Container>

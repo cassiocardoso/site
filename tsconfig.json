@@ -18,7 +18,6 @@
   },
   "include": ["src", "vite-env.d.ts"],
   "exclude": [
-    "node_modules",
-    "src/services/storyblok.ts"
+    "node_modules"
   ]
 }
