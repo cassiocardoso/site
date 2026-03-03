@@ -19,10 +19,6 @@
   "include": ["src", "vite-env.d.ts"],
   "exclude": [
     "node_modules",
-    "src/components/Analytics",
-    "src/components/Container",
-    "src/components/Nav",
-    "src/components/ThemeSelector",
     "src/services/storyblok.ts"
   ]
 }
