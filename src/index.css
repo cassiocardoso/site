@@ -1,46 +1,20 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
 
-/* Class-based dark mode — toggles on .dark added to <html> */
-@custom-variant dark (&:where(.dark, .dark *));
-
 @theme {
-  /* ── Colors (maps 1:1 from the old CSS custom properties) ── */
-  --color-gray-100: #16161a;
-  --color-gray-200: #242629;
-  --color-gray-500: #72757e;
-  --color-gray-700: #94a1b2;
-  --color-gray-900: #fffffe;
-  --color-purple-500: #7f5af0;
-  --color-green-500: #2cb67d;
-  --color-red-500: #e45858;
-  --color-yellow-500: #ffd803;
-  --color-blue-500: #3da9fc;
-  --color-orange-500: #faae2b;
-  --color-pink-500: #ff8ba7;
+  /* ── Brutalist palette ── */
+  --color-br-bg: #f2efe9;
+  --color-br-ink: #0a0a0a;
+  --color-br-accent: #2855e0;
+  --color-br-body: #3a3530;
+  --color-br-muted: #6b665c;
+  --color-br-faint: #c0bab0;
+  --color-br-subtle: #9a9488;
 
   /* ── Typography ── */
   --font-body: 'Nunito', sans-serif;
-  --font-heading: 'Lora', serif;
+  --font-display: 'Syne', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
-
-  --text-sm: 0.9rem;
-  --text-base: 20px;
-  --text-lg: 1.5rem;
-  --text-xl: 4rem;
-  --text-2xl: 6rem;
-
-  /* ── Spacing ── */
-  --spacing-xs: 0.5rem;
-  --spacing-sm: 1rem;
-  --spacing-md: 2rem;
-  --spacing-lg: 3rem;
-  --spacing-xl: 4rem;
-  --spacing-xxl: 6rem;
-
-  /* ── Border radius ── */
-  --radius-sm: 8px;
-  --radius-md: 16px;
 
   /* ── Breakpoints ── */
   --breakpoint-sm: 400px;
@@ -80,162 +54,76 @@
       'Open Sans',
       'Helvetica Neue',
       sans-serif;
-    background-color: var(--color-gray-900);
-    color: var(--color-gray-200);
-    transition:
-      background-color 400ms ease,
-      color 400ms ease;
-  }
-
-  .dark body {
-    background-color: var(--color-gray-100);
-    color: var(--color-gray-700);
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: var(--color-gray-100);
-    font-family: var(--font-heading);
-  }
-
-  .dark h1,
-  .dark h2,
-  .dark h3,
-  .dark h4,
-  .dark h5,
-  .dark h6 {
-    color: var(--color-gray-900);
-  }
-
-  h1,
-  h2 {
-    margin: var(--spacing-md) 0;
-  }
-
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: var(--spacing-sm) 0;
-  }
-
-  p {
-    font-size: var(--text-base);
-    line-height: 1.3;
-    margin: var(--spacing-md) 0;
-  }
-
-  a {
-    color: var(--color-blue-500);
-  }
-
-  .dark a {
-    color: var(--color-purple-500);
+    background-color: var(--color-br-bg);
+    color: var(--color-br-body);
   }
 
   pre {
     overflow: auto;
-    padding: var(--spacing-sm);
-    border-left: 2px solid;
+    padding: 1rem;
+    border-left: 2px solid var(--color-br-ink);
   }
 
   code {
-    color: var(--color-gray-100);
+    color: var(--color-br-ink);
     font-family: var(--font-mono);
   }
+}
 
-  .dark code {
-    color: var(--color-gray-900);
+/* ── Brutalist animations & button ── */
+@keyframes br-slam {
+  from { opacity: 0; transform: translateY(-30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes br-slide {
+  from { opacity: 0; transform: translateX(-20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.br-slam { animation: br-slam 0.5s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.br-slide { animation: br-slide 0.6s cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .br-slam,
+  .br-slide {
+    animation: none;
   }
 }
 
-/* ── ThemeSelector component ── */
-.theme-switch {
-  align-items: center;
-  border: 0.2rem solid currentColor;
-  border-radius: 2rem;
-  display: flex;
-  font-family: var(--font-mono);
-  height: 2.5rem;
-  justify-content: center;
-  padding: 0 1rem;
-  position: absolute;
-  top: 2rem;
-  left: 1rem;
-  width: 20rem;
+.br-btn {
+  position: relative;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), background 0.2s ease;
 }
 
-@media (min-width: 800px) {
-  .theme-switch {
-    left: auto;
-    right: 2rem;
+.br-btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 2px solid var(--color-br-ink);
+  transform: translate(4px, 4px);
+  z-index: -1;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (hover: hover) {
+  .br-btn:hover {
+    transform: translate(-2px, -2px);
+  }
+  .br-btn:hover::after {
+    transform: translate(6px, 6px);
   }
 }
 
-.theme-switch-label {
-  cursor: pointer;
-  padding: 0 1rem;
-  transition: color 200ms ease-out;
+.br-btn:focus-visible {
+  outline: 2px solid var(--color-br-accent);
+  outline-offset: 2px;
 }
 
-.theme-switch-indicator {
-  height: 4rem;
-  left: 0;
-  position: absolute;
-  transition: transform 600ms cubic-bezier(0.02, 0.94, 0.09, 0.97);
-  width: 4rem;
+.br-btn:active {
+  transform: translate(1px, 1px);
 }
 
-#Auto:checked ~ .theme-switch-indicator {
-  background: url(/auto.svg) no-repeat;
-  background-size: contain;
-  transform: translateX(3rem);
-}
-
-#Dark:checked ~ .theme-switch-indicator {
-  background: url(/dark.svg) no-repeat;
-  background-size: contain;
-  transform: translateX(7.5rem);
-}
-
-#Light:checked ~ .theme-switch-indicator {
-  background: url(/light.svg) no-repeat;
-  background-size: contain;
-  transform: translateX(12rem);
-}
-
-/* ── Resume component ── */
-.resume-divider {
-  color: transparent;
-  height: 50px;
-  margin: var(--spacing-md) auto;
-  overflow: hidden;
-  position: relative;
-  width: 300px;
-}
-
-.resume-divider::before {
-  content: 'cassiocardoso';
-  display: block;
-  font-size: 3rem;
-  position: relative;
-  text-decoration: underline wavy var(--color-blue-500);
-  top: -32px;
-}
-
-.dark .resume-divider::before {
-  text-decoration-color: var(--color-purple-500);
-}
-
-.resume-divider--small {
-  margin: var(--spacing-sm) auto;
-}
-
-.resume-divider--small::before {
-  font-size: 1.5rem;
-  top: -4px;
+.br-btn:active::after {
+  transform: translate(2px, 2px);
 }

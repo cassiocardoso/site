@@ -1,7 +1,8 @@
 import { createFileRoute } from '@tanstack/react-router';
 import { useQuery } from '@tanstack/react-query';
 
-import { ResumeLayout } from '@/components/layouts/resume-layout';
+import { BrShell } from '@/components/br-shell';
+import { BrResumeLayout } from '@/components/layouts/br-resume-layout';
 import { type ResumeSchema } from '@/types/resume';
 
 const RESUME_URL = 'https://raw.githubusercontent.com/cassiocardoso/resume/master/resume.json';
@@ -26,8 +27,25 @@ function ResumePage() {
     queryFn: fetchResume,
   });
 
-  if (isPending) return null;
-  if (isError) return <p>Failed to load resume. Please try again later.</p>;
+  if (isPending) {
+    return (
+      <BrShell title="Resume">
+        <p className="text-br-muted">Loading resume...</p>
+      </BrShell>
+    );
+  }
 
-  return <ResumeLayout resume={resume} />;
+  if (isError) {
+    return (
+      <BrShell title="Resume">
+        <p className="text-br-body">Failed to load resume. Please try again later.</p>
+      </BrShell>
+    );
+  }
+
+  return (
+    <BrShell title="Resume">
+      <BrResumeLayout resume={resume} />
+    </BrShell>
+  );
 }
