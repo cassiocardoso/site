@@ -8,6 +8,6 @@ export type Post = {
       alt: string;
       filename: string;
     };
-    body: string; // pre-rendered HTML from renderRichText
+    body?: string; // pre-rendered HTML from renderRichText (absent on listing)
   };
 };
