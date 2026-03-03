@@ -4,13 +4,8 @@ import { useDarkMode } from 'next-dark-mode';
 import * as S from './styles';
 
 export const ThemeSelector: FC = () => {
-  const {
-    autoModeActive,
-    darkModeActive,
-    switchToAutoMode,
-    switchToDarkMode,
-    switchToLightMode,
-  } = useDarkMode();
+  const { autoModeActive, darkModeActive, switchToAutoMode, switchToDarkMode, switchToLightMode } =
+    useDarkMode();
 
   const findActive = (text: string): boolean => {
     if (autoModeActive) {

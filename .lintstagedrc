@@ -1,4 +1,0 @@
-{
-  "*.{ts,tsx}": ["npm run prettier", "git add"],
-  "{*.{scss,json,md}}": ["npm run prettier", "git add"]
-}
